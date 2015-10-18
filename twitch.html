@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitch</title>
+	<link rel="stylesheet" type="text/css" href="./twitch.css">
+	<script type="application/javascript" src="./twitch.js"></script>
+
+</head>
+<body>
+        <div >
+            <input id="searchId" type="text" placeholder="Search query..."/>
+            <input type="button" value="Search" 
+                   onclick="twitch.loadStreams(document.getElementById('searchId').value)" />
+        </div>
+        <hr/>
+        <div>
+            <div style="float:right;visibility:hidden" id="navBlockId">
+                <a id="goLeft" href="#" onclick="twitch.navigate(-1)">&#9668;</a> 
+                <span id="navID"></span> 
+                <a id="goRight" href="#" onclick="twitch.navigate(1)">&#9658;</a>
+            </div>
+            <div styule="float:left" id="resultsId"></div>
+        </div>
+
+</body>
+</html>
